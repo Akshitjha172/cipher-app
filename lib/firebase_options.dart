@@ -19,7 +19,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(CipherXApp());
+  runApp(MyApp());
 }
 
 //  await Firebase.initializeApp(

@@ -26,13 +26,13 @@ void main() async {
         ChangeNotifierProvider(create: (_) => HomeViewModel()),
         ChangeNotifierProvider(create: (_) => ProfileViewModel()),
       ],
-      child: const CipherXApp(),
+      child: const MyApp(),
     ),
   );
 }
 
-class CipherXApp extends StatelessWidget {
-  const CipherXApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

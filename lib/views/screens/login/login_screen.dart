@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               const Text(
-                'CipherX',
+                'Xpense Tracker',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 32,
@@ -48,17 +48,6 @@ class LoginScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => const HomeScreen()),
                   );
                 },
-
-                //  () async {
-                //   if (authViewModel.isLoading) return;
-
-                //   final success = await authViewModel.signInWithGoogle();
-                //   if (success && context.mounted) {
-                //     Navigator.of(context).pushReplacement(
-                //       MaterialPageRoute(builder: (_) => const HomeScreen()),
-                //     );
-                //   }
-                // },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: AppColors.primary,
@@ -91,52 +80,53 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (_) => const HomeScreen()),
-                  );
-                },
+              // ElevatedButton(
+              //   onPressed: ()
+              //       // {
+              //       //   Navigator.of(context).pushReplacement(
+              //       //     MaterialPageRoute(builder: (_) => const HomeScreen()),
+              //       //   );
+              //       // },
 
-                //  () async {
-                //   if (authViewModel.isLoading) return;
+              //       async {
+              //     if (authViewModel.isLoading) return;
 
-                //   final success = await authViewModel.signInWithGoogle();
-                //   if (success && context.mounted) {
-                //     Navigator.of(context).pushReplacement(
-                //       MaterialPageRoute(builder: (_) => const HomeScreen()),
-                //     );
-                //   }
-                // },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: AppColors.primary,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 12,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Image.asset(
-                      AppImages.googleIcon,
-                      height: 24,
-                      width: 24,
-                    ),
-                    const SizedBox(width: 12),
-                    Text(
-                      'Sign in with Google',
-                      style: AppTextStyles.button.copyWith(
-                        color: AppColors.primary,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              //     final success = await authViewModel.signInWithGoogle();
+              //     if (success && context.mounted) {
+              //       Navigator.of(context).pushReplacement(
+              //         MaterialPageRoute(builder: (_) => const HomeScreen()),
+              //       );
+              //     }
+              //   },
+              //   style: ElevatedButton.styleFrom(
+              //     backgroundColor: Colors.white,
+              //     foregroundColor: AppColors.primary,
+              //     padding: const EdgeInsets.symmetric(
+              //       horizontal: 24,
+              //       vertical: 12,
+              //     ),
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(8),
+              //     ),
+              //   ),
+              //   child: Row(
+              //     mainAxisSize: MainAxisSize.min,
+              //     children: [
+              //       Image.asset(
+              //         AppImages.googleIcon,
+              //         height: 24,
+              //         width: 24,
+              //       ),
+              //       const SizedBox(width: 12),
+              //       Text(
+              //         'Sign in with Google',
+              //         style: AppTextStyles.button.copyWith(
+              //           color: AppColors.primary,
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               const SizedBox(height: 40),
             ],
           ),
