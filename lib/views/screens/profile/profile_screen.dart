@@ -2,6 +2,7 @@ import 'package:expense_tracker/res/colors/app_colors.dart';
 import 'package:expense_tracker/viewmodels/auth/auth_viewmodel.dart';
 import 'package:expense_tracker/viewmodels/profile/profile_viewmodel.dart';
 import 'package:expense_tracker/views/screens/login/login_screen.dart';
+import 'package:expense_tracker/views/screens/profile/widgets/profile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -64,10 +65,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                   const SizedBox(height: 4),
-                  IconButton(
-                    icon: const Icon(Icons.edit, size: 20),
-                    onPressed: () {},
-                  ),
+                  // IconButton(
+                  //   icon: const Icon(Icons.edit, size: 20),
+                  //   onPressed: () {},
+                  // ),
                   const SizedBox(height: 32),
 
                   // Account options
@@ -87,16 +88,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                         const Divider(),
                         ProfileOption(
-                          icon: Icons.settings,
+                          icon: Icons.language,
                           color: Colors.grey,
-                          title: 'Settings',
+                          title: 'Language',
                           onTap: () {},
                         ),
                         const Divider(),
                         ProfileOption(
-                          icon: Icons.file_download,
+                          icon: Icons.fingerprint,
                           color: Colors.green,
-                          title: 'Export Data',
+                          title: 'App Lock',
                           onTap: () {},
                         ),
                         const Divider(),
@@ -122,38 +123,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
-    );
-  }
-}
-
-class ProfileOption extends StatelessWidget {
-  final IconData icon;
-  final Color color;
-  final String title;
-  final VoidCallback onTap;
-
-  const ProfileOption({
-    Key? key,
-    required this.icon,
-    required this.color,
-    required this.title,
-    required this.onTap,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
-          color: color.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Icon(icon, color: color),
-      ),
-      title: Text(title),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-      onTap: onTap,
     );
   }
 }
